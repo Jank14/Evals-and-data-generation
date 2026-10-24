@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Week 7 Evals demos</title><style>
+:root{
+  --ink:#1E293B; --muted:#475569; --faint:#94A3B8; --line:#CBD5E1; --bg:#FFFFFF; --panel:#F1F5F9;
+  --navy:#0F1E33; --teal:#0F766E; --tealT:#E3F3F0; --orange:#C2410C; --orangeT:#FDE9DE;
+  --purple:#6D28D9; --purpleT:#EFE7FD; --blue:#1D4ED8; --blueT:#E5EDFD; --amber:#B45309; --amberT:#FDF1D6;
+  --green:#15803D; --greenT:#E2F4E8; --red:#B91C1C; --redT:#FBE3E3; --code:#14213A; --codeInk:#E2E8F0;
+}
+*{box-sizing:border-box}
+html{font-size:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Calibri","Carlito","Segoe UI",system-ui,sans-serif;line-height:1.35}
+.wrap{max-width:1440px;margin:0 auto;padding:22px 32px 40px}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.06em;color:var(--teal);text-transform:uppercase}
+h1{font-size:2rem;margin:.2rem 0 .3rem}
+.sub{color:var(--muted);font-size:1rem;margin:0 0 .8rem;max-width:1100px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:.6rem 0 1rem}
+.tab{font:inherit;font-size:1rem;font-weight:700;padding:.55rem 1.1rem;border-radius:12px;border:2px solid var(--teal);background:#fff;color:var(--teal);cursor:pointer}
+.tab.on{background:var(--teal);color:#fff}
+.pane{display:none}.pane.on{display:block}
+.row{display:flex;gap:18px;flex-wrap:wrap;align-items:stretch}
+.col{flex:1 1 380px;min-width:0}
+.card{background:var(--panel);border-radius:14px;padding:16px 18px}
+.card h3{margin:0 0 .5rem;font-size:1.15rem}
+button.b{font:inherit;font-size:1rem;font-weight:700;padding:.5rem 1rem;border-radius:10px;border:0;background:var(--purple);color:#fff;cursor:pointer}
+button.b.sec{background:#fff;color:var(--purple);border:2px solid var(--purple)}
+button.b.t{background:var(--teal)}button.b.o{background:var(--orange)}
+button.b:disabled{opacity:.45;cursor:default}
+.seg{display:inline-flex;border:2px solid var(--teal);border-radius:10px;overflow:hidden}
+.seg button{font:inherit;font-size:.95rem;font-weight:700;padding:.4rem .9rem;border:0;background:#fff;color:var(--teal);cursor:pointer}
+.seg button.on{background:var(--teal);color:#fff}
+label.ctl b{min-width:3.4em;white-space:nowrap}
+label.ctl{display:flex;align-items:center;gap:.6rem;font-size:1rem;margin:.35rem 0}
+input[type=range]{width:220px;accent-color:var(--purple)}
+input[type=checkbox]{width:22px;height:22px;accent-color:var(--purple)}
+.msg{display:flex;gap:10px;margin:8px 0;align-items:stretch}
+.role{flex:0 0 150px;border-radius:10px;color:#fff;font-family:Consolas,Menlo,monospace;font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px}
+.txt{flex:1;border-radius:10px;padding:10px 14px;font-size:1rem;white-space:pre-wrap}
+.r-system .role{background:var(--teal)}.r-system .txt{background:var(--tealT)}
+.r-user .role{background:var(--blue)}.r-user .txt{background:var(--blueT)}
+.r-assistant .role{background:var(--purple)}.r-assistant .txt{background:var(--purpleT);border:2px dashed var(--purple)}
+.r-model .role{background:var(--orange)}.r-model .txt{background:var(--orangeT)}
+.off{opacity:.25}
+code,.mono{font-family:Consolas,Menlo,monospace}
+pre.code{background:var(--code);color:var(--codeInk);border-radius:12px;padding:14px 16px;font-size:.85rem;line-height:1.45;overflow:auto;margin:0;white-space:pre}
+.hl{background:#2B4166;border-radius:4px}
+.pill{display:inline-block;border-radius:999px;padding:.15rem .7rem;font-weight:700;font-size:.85rem}
+.ok{color:var(--green)}.bad{color:var(--red)}
+.big{font-size:2.6rem;font-weight:800;line-height:1}
+.note{font-size:.85rem;color:var(--muted);margin-top:.6rem}
+.foot{margin-top:1.2rem;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.6rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:900px){html{font-size:17px}.grid2{grid-template-columns:1fr}.role{flex-basis:110px}}
+</style></head><body><div class="wrap"><div class="kicker">TARA · Week 7 · ARENA 3.1 + 3.2</div><h1>Evals: interactive demos</h1><a class="card" style="display:block;text-decoration:none;color:inherit;margin:10px 0" href="00_eval_basics.html"><div class="kicker">TARA · Week 7 · Demo 0 · Part 0</div><div style="font-size:1.3rem;font-weight:700">Run an eval, then make the decision</div></a><a class="card" style="display:block;text-decoration:none;color:inherit;margin:10px 0" href="02_alignment_faking.html"><div class="kicker">TARA · Week 7 · Demo 2 · Notebook 3.1 §2</div><div style="font-size:1.3rem;font-weight:700">Run the alignment-faking experiment yourself</div></a><a class="card" style="display:block;text-decoration:none;color:inherit;margin:10px 0" href="03_question_doctor.html"><div class="kicker">TARA · Week 7 · Demo 3 · Notebook 3.1 §3</div><div style="font-size:1.3rem;font-weight:700">From threat model to question, then be the question doctor</div></a><a class="card" style="display:block;text-decoration:none;color:inherit;margin:10px 0" href="05_quality_control.html"><div class="kicker">TARA · Week 7 · Demo 5 · Notebook 3.2 §2</div><div style="font-size:1.3rem;font-weight:700">Be the judge, set the threshold, check the bias</div></a></div></body></html>
